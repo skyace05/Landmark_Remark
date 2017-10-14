@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { httpService } from './app.service';
+import { Landmark } from "./app.model";
 import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs/Observable";
 
 @Component({
   selector: 'app-root',
@@ -14,11 +16,13 @@ export class AppComponent  {
   }
 
   title = this.display();
-
+  results: any;
+  output: string;
   display(){
-    var results = this._httpService.getLandmarks();
 
-    return "test";
+    console.log("log: ", this._httpService.getLandmarks());
+
+    return this.output;
   }
 
   
