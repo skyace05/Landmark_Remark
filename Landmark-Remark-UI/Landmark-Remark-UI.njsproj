@@ -24489,6 +24489,9 @@
     <TypeScriptCompile Include="Landmark-Remark-UI\node_modules\zone.js\lib\zone.ts" />
     <TypeScriptCompile Include="Landmark-Remark-UI\src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="Landmark-Remark-UI\src\app\app.component.ts" />
+    <TypeScriptCompile Include="Landmark-Remark-UI\src\app\app.model.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Landmark-Remark-UI\src\app\app.module.ts" />
     <TypeScriptCompile Include="Landmark-Remark-UI\src\app\app.service.ts" />
     <TypeScriptCompile Include="Landmark-Remark-UI\src\environments\environment.prod.ts" />
