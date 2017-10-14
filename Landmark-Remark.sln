@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Landmark-Remark", "Landmark
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Landmark-Remark.Tests", "Landmark-Remark.Tests\Landmark-Remark.Tests.csproj", "{70C1EAFD-9524-495C-8ECD-3042543BEAFF}"
 EndProject
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Landmark-Remarl-UI", "NodejsWebApp1\Landmark-Remarl-UI.njsproj", "{E0802F7C-32E7-4379-97D5-98A236353C64}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Landmark-Remark-UI", "Landmark-Remark-UI\Landmark-Remark-UI.njsproj", "{E0802F7C-32E7-4379-97D5-98A236353C64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

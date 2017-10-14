@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Web.Http.Cors;
 using Landmark_Remark.Models;
 
 namespace Landmark_Remark.Controllers
@@ -18,6 +19,7 @@ namespace Landmark_Remark.Controllers
         private LandmarkContext db = new LandmarkContext();
 
         // GET: api/Landmarks
+        [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
         public IQueryable<Landmark> GetLandmarks()
         {
             return db.Landmarks;

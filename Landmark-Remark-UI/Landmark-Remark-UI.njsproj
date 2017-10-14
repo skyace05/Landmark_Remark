@@ -19292,6 +19292,14 @@
     <Content Include="Landmark-Remark-UI\src\assets\.gitkeep" />
     <Content Include="Landmark-Remark-UI\src\favicon.ico" />
     <Content Include="Landmark-Remark-UI\src\index.html" />
+    <Content Include="Landmark-Remark-UI\src\src\app\app.component.css" />
+    <Content Include="Landmark-Remark-UI\src\src\app\app.component.html" />
+    <Content Include="Landmark-Remark-UI\src\src\assets\.gitkeep" />
+    <Content Include="Landmark-Remark-UI\src\src\favicon.ico" />
+    <Content Include="Landmark-Remark-UI\src\src\index.html" />
+    <Content Include="Landmark-Remark-UI\src\src\styles.css" />
+    <Content Include="Landmark-Remark-UI\src\src\tsconfig.app.json" />
+    <Content Include="Landmark-Remark-UI\src\src\tsconfig.spec.json" />
     <Content Include="Landmark-Remark-UI\src\styles.css" />
     <Content Include="Landmark-Remark-UI\src\tsconfig.app.json" />
     <Content Include="Landmark-Remark-UI\src\tsconfig.spec.json" />
@@ -22437,6 +22445,11 @@
     <Folder Include="Landmark-Remark-UI\src\assets\" />
     <Folder Include="Landmark-Remark-UI\src\environments\" />
     <Folder Include="Landmark-Remark-UI\src\services\" />
+    <Folder Include="Landmark-Remark-UI\src\src\" />
+    <Folder Include="Landmark-Remark-UI\src\src\app\" />
+    <Folder Include="Landmark-Remark-UI\src\src\assets\" />
+    <Folder Include="Landmark-Remark-UI\src\src\environments\" />
+    <Folder Include="Landmark-Remark-UI\src\src\services\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Landmark-Remark-UI\e2e\app.e2e-spec.ts" />
@@ -24485,6 +24498,17 @@
     <TypeScriptCompile Include="Landmark-Remark-UI\src\services\http.service.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Landmark-Remark-UI\src\src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="Landmark-Remark-UI\src\src\app\app.component.ts" />
+    <TypeScriptCompile Include="Landmark-Remark-UI\src\src\app\app.module.ts" />
+    <TypeScriptCompile Include="Landmark-Remark-UI\src\src\app\app.service.ts" />
+    <TypeScriptCompile Include="Landmark-Remark-UI\src\src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="Landmark-Remark-UI\src\src\environments\environment.ts" />
+    <TypeScriptCompile Include="Landmark-Remark-UI\src\src\main.ts" />
+    <TypeScriptCompile Include="Landmark-Remark-UI\src\src\polyfills.ts" />
+    <TypeScriptCompile Include="Landmark-Remark-UI\src\src\services\http.service.ts" />
+    <TypeScriptCompile Include="Landmark-Remark-UI\src\src\test.ts" />
+    <TypeScriptCompile Include="Landmark-Remark-UI\src\src\typings.d.ts" />
     <TypeScriptCompile Include="Landmark-Remark-UI\src\test.ts" />
     <TypeScriptCompile Include="Landmark-Remark-UI\src\typings.d.ts" />
   </ItemGroup>
