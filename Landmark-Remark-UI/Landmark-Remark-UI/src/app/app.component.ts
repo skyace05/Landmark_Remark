@@ -3,7 +3,6 @@ import { httpService } from './app.service';
 import { Landmark } from "./app.model";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs/Observable";
-import { MapComponent } from './map/map.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AgmCoreModule } from 'angular2-google-maps/core';

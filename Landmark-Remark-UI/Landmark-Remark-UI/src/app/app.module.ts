@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { httpService } from './app.service';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MapComponent } from './map/map.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 const googleMapsCore = AgmCoreModule.forRoot({
   apiKey: 'AIzaSyCCT4KyBGEMTvCAJn30J7zgXQY7Svywulw',
@@ -11,7 +10,7 @@ const googleMapsCore = AgmCoreModule.forRoot({
 
 @NgModule({
   declarations: [
-    AppComponent, MapComponent
+    AppComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, googleMapsCore
