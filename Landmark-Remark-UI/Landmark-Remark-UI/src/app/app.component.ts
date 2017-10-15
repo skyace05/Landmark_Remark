@@ -6,6 +6,7 @@ import { Observable } from "rxjs/Observable";
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AgmCoreModule } from 'angular2-google-maps/core';
+import { Geolocation } from 'ionic-native';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +27,11 @@ export class AppComponent  {
   results: Landmark[];
 
   display() {
+    Geolocation.getCurrentPosition().then(pos => {
+      this.lat = pos.coords.latitude;
+      this.lng = pos.coords.longitude;
+    });
+
     this._httpService.getLandmarks().subscribe(data => {
       this.results = data;
     });
