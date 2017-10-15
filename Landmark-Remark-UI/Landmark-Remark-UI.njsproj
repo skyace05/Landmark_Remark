@@ -19292,6 +19292,8 @@
     <Content Include="Landmark-Remark-UI\src\assets\.gitkeep" />
     <Content Include="Landmark-Remark-UI\src\favicon.ico" />
     <Content Include="Landmark-Remark-UI\src\index.html" />
+    <Content Include="Landmark-Remark-UI\src\app\map\map.component.css" />
+    <Content Include="Landmark-Remark-UI\src\app\map\map.component.html" />
     <Content Include="Landmark-Remark-UI\src\src\app\app.component.css" />
     <Content Include="Landmark-Remark-UI\src\src\app\app.component.html" />
     <Content Include="Landmark-Remark-UI\src\src\assets\.gitkeep" />
@@ -22444,6 +22446,7 @@
     <Folder Include="Landmark-Remark-UI\src\app\" />
     <Folder Include="Landmark-Remark-UI\src\assets\" />
     <Folder Include="Landmark-Remark-UI\src\environments\" />
+    <Folder Include="Landmark-Remark-UI\src\app\map\" />
     <Folder Include="Landmark-Remark-UI\src\services\" />
     <Folder Include="Landmark-Remark-UI\src\src\" />
     <Folder Include="Landmark-Remark-UI\src\src\app\" />
@@ -24497,6 +24500,8 @@
     <TypeScriptCompile Include="Landmark-Remark-UI\src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="Landmark-Remark-UI\src\environments\environment.ts" />
     <TypeScriptCompile Include="Landmark-Remark-UI\src\main.ts" />
+    <TypeScriptCompile Include="Landmark-Remark-UI\src\app\map\map.component.spec.ts" />
+    <TypeScriptCompile Include="Landmark-Remark-UI\src\app\map\map.component.ts" />
     <TypeScriptCompile Include="Landmark-Remark-UI\src\polyfills.ts" />
     <TypeScriptCompile Include="Landmark-Remark-UI\src\services\http.service.ts">
       <SubType>Code</SubType>

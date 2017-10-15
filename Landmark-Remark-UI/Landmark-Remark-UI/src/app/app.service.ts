@@ -10,17 +10,12 @@ import { Http } from '@angular/http';
 export class httpService {
 
   constructor(private _http: HttpClient) { }
-  landmarks: any;
 
   getLandmarks(): Observable<Landmark[]> {
     return this._http.get<Landmark[]>('http://localhost:54103/api/Landmarks')
       .map((data: Landmark[]) => {
         return data;
-    });
-     
-
-
-     
+    });    
   }
 
 } 
