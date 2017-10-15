@@ -17,14 +17,14 @@ import { Geolocation } from 'ionic-native';
 
 
 export class AppComponent  {
-  lat: number = 51.678418;
-  lng: number = 7.809007;
 
   constructor(private _httpService: httpService) {
     this.display();
   }
 
   results: Landmark[];
+  lat: number;
+  lng: number;
 
   display() {
     Geolocation.getCurrentPosition().then(pos => {
