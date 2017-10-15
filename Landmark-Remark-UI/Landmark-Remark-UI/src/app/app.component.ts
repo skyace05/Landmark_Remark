@@ -13,16 +13,17 @@ import { Observable } from "rxjs/Observable";
 export class AppComponent  {
 
   constructor(private _httpService: httpService) {
+    this.display();
   }
+  results: Landmark[];
+  output: Landmark[];
+  location: any;
 
-  title = this.display();
-  results: any;
-  output: string;
-  display(){
-
-    console.log("log: ", this._httpService.getLandmarks());
-
-    return this.output;
+  display() {
+    this._httpService.getLandmarks().subscribe(data => {
+      this.results = data;
+      this.location = this.results[0].Location;
+    });
   }
 
   

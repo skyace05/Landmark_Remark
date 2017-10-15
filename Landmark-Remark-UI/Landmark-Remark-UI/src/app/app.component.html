@@ -1,8 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
+
+    <div *ngFor="let x of results">
+      <div>Id: {{x.Id}}</div>
+      <div>Location: {{x.Location}}</div>
+      <div>User: {{x.User}}</div>
+      <div>Notes: {{x.Note}}</div>
+     </div>
+
   
 </div>
 
