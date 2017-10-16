@@ -12,7 +12,7 @@ export class httpService {
   constructor(private _http: HttpClient) { }
 
   getLandmarks(): Observable<Landmark[]> {
-    return this._http.get<Landmark[]>('http://localhost:54103/api/Landmarks')
+    return this._http.get<Landmark[]>('http://localhost:50440/api/Landmarks')
       .map((data: Landmark[]) => {
         return data;
     });    

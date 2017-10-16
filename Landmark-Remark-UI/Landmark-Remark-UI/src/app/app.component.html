@@ -2,15 +2,20 @@
 <div style="text-align:center">
 
     <div *ngFor="let x of results">
-      <div>Id: {{x.Id}}</div>
-      <div>Location: {{x.Location}}</div>
-      <div>User: {{x.User}}</div>
-      <div>Notes: {{x.Note}}</div>
-     </div>
+        <div>Id: {{x.Id}}</div>
+        <div>Latitude: {{x.Latitude}}</div>
+        <div>Longitude: {{x.Longitude}}</div>
+        <div>User: {{x.User}}</div>
+        <div>Notes: {{x.Note}}</div>
+    </div>
 
-  <sebm-google-map [latitude]="lat" [longitude]="lng">
-    <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
-  </sebm-google-map>
+    <sebm-google-map [latitude]="lat" [longitude]="lng">
+        <div *ngFor="let x of results">
+            <div>
+                <sebm-google-map-marker [latitude]=x.Latitude [longitude]=x.Longitude></sebm-google-map-marker>
+            </div>
+        </div>
+    </sebm-google-map>
 </div>
 
 
