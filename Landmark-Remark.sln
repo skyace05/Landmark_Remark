@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Landmark-Remark", "Landmark-Remark\Landmark-Remark.csproj", "{35BD4187-0A77-48D4-8E51-ADE1CF254693}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Landmark-Remark.Tests", "Landmark-Remark.Tests\Landmark-Remark.Tests.csproj", "{70C1EAFD-9524-495C-8ECD-3042543BEAFF}"
-EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Landmark-Remark-UI", "Landmark-Remark-UI\Landmark-Remark-UI.njsproj", "{E0802F7C-32E7-4379-97D5-98A236353C64}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Landmark_Remark", "Landmark_Remark\Landmark_Remark.csproj", "{88F4487E-FFEE-42C2-BD68-792F3CE93B7A}"
@@ -19,14 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{35BD4187-0A77-48D4-8E51-ADE1CF254693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35BD4187-0A77-48D4-8E51-ADE1CF254693}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35BD4187-0A77-48D4-8E51-ADE1CF254693}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35BD4187-0A77-48D4-8E51-ADE1CF254693}.Release|Any CPU.Build.0 = Release|Any CPU
-		{70C1EAFD-9524-495C-8ECD-3042543BEAFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70C1EAFD-9524-495C-8ECD-3042543BEAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70C1EAFD-9524-495C-8ECD-3042543BEAFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70C1EAFD-9524-495C-8ECD-3042543BEAFF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E0802F7C-32E7-4379-97D5-98A236353C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E0802F7C-32E7-4379-97D5-98A236353C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0802F7C-32E7-4379-97D5-98A236353C64}.Release|Any CPU.ActiveCfg = Release|Any CPU

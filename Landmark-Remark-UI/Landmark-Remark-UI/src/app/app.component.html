@@ -12,7 +12,11 @@
     <sebm-google-map [latitude]="lat" [longitude]="lng">
         <div *ngFor="let x of results">
             <div>
-                <sebm-google-map-marker [latitude]=x.Latitude [longitude]=x.Longitude></sebm-google-map-marker>
+                <sebm-google-map-marker [latitude]=x.Latitude [longitude]=x.Longitude [title]="note">
+                    <sebm-google-map-info-window>
+                        {{x.User}}: {{x.Note}}
+                    </sebm-google-map-info-window>
+                </sebm-google-map-marker>
             </div>
         </div>
     </sebm-google-map>

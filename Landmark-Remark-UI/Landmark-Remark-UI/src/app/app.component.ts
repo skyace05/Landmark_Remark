@@ -25,6 +25,7 @@ export class AppComponent  {
   results: Landmark[];
   lat: number;
   lng: number;
+  note: string = "test";
 
   display() {
     Geolocation.getCurrentPosition().then(pos => {
