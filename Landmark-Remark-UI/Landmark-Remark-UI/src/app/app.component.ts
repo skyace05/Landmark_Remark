@@ -23,9 +23,10 @@ export class AppComponent  {
   }
 
   results: Landmark[];
+  query: Landmark[];
   lat: number;
   lng: number;
-  note: string = "test";
+  search: string;
 
   display() {
     Geolocation.getCurrentPosition().then(pos => {
@@ -34,9 +35,14 @@ export class AppComponent  {
     });
 
     this._httpService.getLandmarks().subscribe(data => {
-      this.results = data;
+        this.results = data;
     });
   }
 
-  
+  filterDisplay() {
+      this.query = new Array<Landmark>();
+      for (var i = 0; i < this.results.length; i++)
+          if (this.results[i].Note.match(this.search) || this.results[i].User.match(this.search))
+              var index = this.query.push(this.results[i]);
+  }  
 }

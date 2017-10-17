@@ -5,5 +5,8 @@
   "main": "server.js",
   "author": {
     "name": "GG CyberCafe"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.4.7"
   }
 }

@@ -1,4 +1,5 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -34,6 +35,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Landmark-Remark-UI\src\assets\jquery.linq.min.js" />
     <Compile Include="Landmark-Remark-UI\karma.conf.js" />
     <Compile Include="Landmark-Remark-UI\node_modules\%40angular-devkit\build-optimizer\src\build-optimizer\build-optimizer.js" />
     <Compile Include="Landmark-Remark-UI\node_modules\%40angular-devkit\build-optimizer\src\build-optimizer\cli.js" />

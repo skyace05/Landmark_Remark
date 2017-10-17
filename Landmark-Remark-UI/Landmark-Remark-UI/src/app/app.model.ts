@@ -1,7 +1,8 @@
 export class Landmark
 {
   Id: any;
-  Location: string;
+  Latitude: any;
+  Longitude: any;
   User: string;
   Note: string;
 }
