@@ -27,6 +27,7 @@ export class AppComponent  {
   lat: number;
   lng: number;
   search: string;
+  note: string = "";
 
   display() {
     Geolocation.getCurrentPosition().then(pos => {
@@ -39,10 +40,22 @@ export class AppComponent  {
     });
   }
 
+  onInfoWindowClose() {
+      let body = {
+          'Latitude': this.lat,
+          'Longitude': this.lng,
+          'User': 'user1',
+          'Note': this.note
+      };
+
+      if (body.Note != null && body.Note != "")
+        this._httpService.postNotes(body);
+  }
+
   filterDisplay() {
       this.query = new Array<Landmark>();
       for (var i = 0; i < this.results.length; i++)
           if (this.results[i].Note.match(this.search) || this.results[i].User.match(this.search))
-              var index = this.query.push(this.results[i]);
+              this.query.push(this.results[i]);
   }  
 }

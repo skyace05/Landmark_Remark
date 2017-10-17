@@ -74,6 +74,7 @@ namespace Landmark_Remark.Controllers
 
         // POST: api/Landmarks
         [ResponseType(typeof(Landmark))]
+        [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
         public IHttpActionResult PostLandmark(Landmark landmark)
         {
             if (!ModelState.IsValid)

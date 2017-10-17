@@ -35,7 +35,6 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Landmark-Remark-UI\src\assets\jquery.linq.min.js" />
     <Compile Include="Landmark-Remark-UI\karma.conf.js" />
     <Compile Include="Landmark-Remark-UI\node_modules\%40angular-devkit\build-optimizer\src\build-optimizer\build-optimizer.js" />
     <Compile Include="Landmark-Remark-UI\node_modules\%40angular-devkit\build-optimizer\src\build-optimizer\cli.js" />
