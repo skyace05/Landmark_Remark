@@ -39,6 +39,7 @@ namespace Landmark_Remark.Controllers
 
         // PUT: api/Landmarks/5
         [ResponseType(typeof(void))]
+        [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
         public IHttpActionResult PutLandmark(int id, Landmark landmark)
         {
             if (!ModelState.IsValid)

@@ -26,6 +26,7 @@ export class AppComponent  {
   query: Landmark[];
   lat: number;
   lng: number;
+  user: string = "user1";
   search: string;
   note: string = "";
 
@@ -41,15 +42,38 @@ export class AppComponent  {
   }
 
   onInfoWindowClose() {
-      let body = {
-          'Latitude': this.lat,
-          'Longitude': this.lng,
-          'User': 'user1',
-          'Note': this.note
-      };
+    // checks if user already exists
+    let user = this.user;
+    let userId = null;
+    this.results.forEach(function (result) {
+        if (user == result.User) {
+            userId = result.Id;
+        }
+    })
 
-      if (body.Note != null && body.Note != "")
+    // add new user if note is not empty or null and user does not exists
+    if (this.note != null && this.note != "" && userId == null) {
+        let body = {
+            'Latitude': this.lat,
+            'Longitude': this.lng,
+            'User': this.user,
+            'Note': this.note
+        };
         this._httpService.postNotes(body);
+    }
+    // if user already exists just update record
+    else {
+        let body = {
+            'id': userId,
+            'landmark': {
+                'Latitude': this.lat,
+                'Longitude': this.lng,
+                'User': this.user,
+                'Note': this.note
+            }
+        };
+        this._httpService.updateNotes(body);
+    }
   }
 
   filterDisplay() {

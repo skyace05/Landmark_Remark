@@ -17,11 +17,17 @@ export class httpService {
   }
 
   postNotes(body): any {
-
     return this.http.post<Landmark>('http://localhost:50440/api/Landmarks', body)
           .subscribe((data: Landmark) => {
               return data;
     });    
+  }
+
+  updateNotes(body): any {
+      return this.http.put<Landmark>('http://localhost:50440/api/Landmarks/' + body.id, body)
+          .subscribe((data: Landmark) => {
+              return data;
+          });
   }
 
 } 
