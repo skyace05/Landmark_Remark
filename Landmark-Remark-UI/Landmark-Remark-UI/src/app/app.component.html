@@ -20,13 +20,15 @@
     <form [formGroup]="userForm" (ngSubmit)="submit()">
         <div class="form-container">
             <div class="row columns">
-                <div>
-                    <input type="text" class="input" [(ngModel)]="user" formControlName="user" placeholder="My name is..." required /> <div class="alert" *ngIf="!userForm.controls['user'].valid && userForm.controls['user'].touched"> Username is required. </div>
+                <div class="user-input">
+                    <input type="text" class="input"  [(ngModel)]="user" formControlName="user" placeholder="My name is..." required />
+                    <label class="alert" *ngIf="!userForm.controls['user'].valid && userForm.controls['user'].touched"> This field is required. </label>
                 </div>
-                <div>
-                    <input type="text" class="input" [(ngModel)]="note" formControlName="note" placeholder="Leave a note" required /> <div class="alert" *ngIf="!userForm.controls['note'].valid && userForm.controls['note'].touched"> This field is required. </div>
+                <div class="user-input"> 
+                    <input type="text" class="input" [(ngModel)]="note" formControlName="note" placeholder="Leave a note" required />
+                    <label class="alert" *ngIf="!userForm.controls['note'].valid && userForm.controls['note'].touched"> This field is required. </label>
                 </div>
-                <input type="submit" class="button expanded input" value="Submit" [disabled]="!userForm.valid" />
+                <input type="submit" class="button expanded submit" value="Submit" [disabled]="!userForm.valid" />
             </div>
         </div>
     </form>
