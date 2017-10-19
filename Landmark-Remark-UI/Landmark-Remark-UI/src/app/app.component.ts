@@ -7,6 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { Geolocation } from 'ionic-native';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -17,11 +18,7 @@ import { Geolocation } from 'ionic-native';
 
 
 export class AppComponent  {
-
-  constructor(private _httpService: httpService) {
-    this.display();
-  }
-
+  userForm: FormGroup;
   results: Landmark[];
   query: Landmark[];
   lat: number;
@@ -29,6 +26,16 @@ export class AppComponent  {
   user: string;
   search: string;
   note: string;
+
+  constructor(private fb: FormBuilder, private _httpService: httpService) {
+      this.userForm = fb.group({
+          'user': [null, Validators.required],
+          'note': [null, Validators.required]
+      });
+      this.display();
+  }
+
+
 
   display() {
     Geolocation.getCurrentPosition().then(pos => {

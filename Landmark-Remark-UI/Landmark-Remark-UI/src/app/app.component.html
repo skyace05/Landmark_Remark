@@ -1,10 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-    <input type="text" [(ngModel)]="search" (keyup)="filterDisplay($event)" placeholder="Search for notes or users"/>
-    <input type="text" [(ngModel)]="user" placeholder="My name is..." />
-    <input type="text" [(ngModel)]="note" placeholder="Leave a note" />
-    <button type="submit" (click)="submit()"> Submit </button> 
-     
+    <input type="text" class="search" [(ngModel)]="search" (keyup)="filterDisplay($event)" placeholder="Search for notes or users"/>
+   
     <!-- Sets the center of the map to current user location -->
     <sebm-google-map [latitude]="lat" [longitude]="lng">
         <!-- For current user location -->
@@ -19,6 +16,20 @@
             </sebm-google-map-marker>
         </div>
     </sebm-google-map>
+
+    <form [formGroup]="userForm" (ngSubmit)="submit()">
+        <div class="form-container">
+            <div class="row columns">
+                <div>
+                    <input type="text" class="input" [(ngModel)]="user" formControlName="user" placeholder="My name is..." required /> <div class="alert" *ngIf="!userForm.controls['user'].valid && userForm.controls['user'].touched"> Username is required. </div>
+                </div>
+                <div>
+                    <input type="text" class="input" [(ngModel)]="note" formControlName="note" placeholder="Leave a note" required /> <div class="alert" *ngIf="!userForm.controls['note'].valid && userForm.controls['note'].touched"> This field is required. </div>
+                </div>
+                <input type="submit" class="button expanded input" value="Submit" [disabled]="!userForm.valid" />
+            </div>
+        </div>
+    </form>
 </div>
 
 

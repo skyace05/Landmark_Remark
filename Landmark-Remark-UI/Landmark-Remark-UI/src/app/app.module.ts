@@ -4,7 +4,7 @@ import { httpService } from './app.service';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AgmCoreModule } from 'angular2-google-maps/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 const googleMapsCore = AgmCoreModule.forRoot({
   apiKey: 'AIzaSyCCT4KyBGEMTvCAJn30J7zgXQY7Svywulw',
 });
@@ -14,7 +14,7 @@ const googleMapsCore = AgmCoreModule.forRoot({
     AppComponent
   ],
   imports: [
-      BrowserModule, HttpClientModule, googleMapsCore, FormsModule
+      BrowserModule, HttpClientModule, googleMapsCore, FormsModule, ReactiveFormsModule
   ],
   providers: [httpService],
   bootstrap: [AppComponent]
