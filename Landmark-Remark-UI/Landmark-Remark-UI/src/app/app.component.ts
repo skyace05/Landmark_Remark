@@ -59,7 +59,9 @@ export class AppComponent  {
             'User': this.user,
             'Note': this.note
         };
-        this._httpService.postNotes(body);
+        this._httpService.postNotes(body).subscribe(data => {
+            this.results = data;
+        });;
     }
     // if user already exists just update record
     else {
@@ -74,7 +76,6 @@ export class AppComponent  {
             this.results = data;
         });
     }
-    //window.location.reload();
   }
 
   filterDisplay() {

@@ -66,17 +66,12 @@ namespace Landmark_Remark.Controllers
         // POST: api/Landmarks
         [ResponseType(typeof(Landmark))]
         [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
-        public IHttpActionResult PostLandmark(Landmark landmark)
+        public IQueryable<Landmark> PostLandmark(Landmark landmark)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
             db.Landmarks.Add(landmark);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = landmark.Id }, landmark);
+            return db.Landmarks;
         }
 
         // DELETE: api/Landmarks/5
