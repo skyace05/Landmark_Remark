@@ -26,9 +26,9 @@ export class AppComponent  {
   query: Landmark[];
   lat: number;
   lng: number;
-  user: string = "user1";
+  user: string;
   search: string;
-  note: string = "";
+  note: string;
 
   display() {
     Geolocation.getCurrentPosition().then(pos => {
@@ -41,7 +41,7 @@ export class AppComponent  {
     });
   }
 
-  onInfoWindowClose() {
+  submit() {
     // checks if user already exists
     let user = this.user;
     let userId = null;
@@ -64,16 +64,15 @@ export class AppComponent  {
     // if user already exists just update record
     else {
         let body = {
-            'id': userId,
-            'landmark': {
-                'Latitude': this.lat,
-                'Longitude': this.lng,
-                'User': this.user,
-                'Note': this.note
-            }
+            'Id': userId,
+            'Latitude': this.lat,
+            'Longitude': this.lng,
+            'User': this.user,
+            'Note': this.note         
         };
         this._httpService.updateNotes(body);
     }
+    window.location.reload();
   }
 
   filterDisplay() {

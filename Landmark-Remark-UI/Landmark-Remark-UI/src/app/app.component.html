@@ -1,15 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
     <input type="text" [(ngModel)]="search" (keyup)="filterDisplay($event)" placeholder="Search for notes or users"/>
-
+    <input type="text" [(ngModel)]="user" placeholder="My name is..." />
+    <input type="text" [(ngModel)]="note" placeholder="Leave a note" />
+    <button type="submit" (click)="submit()"> Submit </button> 
+     
     <!-- Sets the center of the map to current user location -->
     <sebm-google-map [latitude]="lat" [longitude]="lng">
         <!-- For current user location -->
-        <sebm-google-map-marker [latitude]="lat" [longitude]="lng" label="C" >
-            <sebm-google-map-info-window (infoWindowClose)="onInfoWindowClose($event)">
-                <input type="text" [(ngModel)]="note" />
-            </sebm-google-map-info-window>
-        </sebm-google-map-marker>
+        <sebm-google-map-marker [latitude]="lat" [longitude]="lng" label="C" > </sebm-google-map-marker>
 
         <!-- Display other user notes -->
         <div *ngFor="let x of query">
