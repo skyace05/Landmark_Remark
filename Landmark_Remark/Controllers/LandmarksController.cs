@@ -40,18 +40,8 @@ namespace Landmark_Remark.Controllers
         // PUT: api/Landmarks/5
         [ResponseType(typeof(void))]
         [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
-        public IHttpActionResult PutLandmark(int id, Landmark landmark)
+        public IQueryable<Landmark> PutLandmark(int id, Landmark landmark)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != landmark.Id)
-            {
-                return BadRequest();
-            }
-
             db.Entry(landmark).State = EntityState.Modified;
 
             try
@@ -62,7 +52,7 @@ namespace Landmark_Remark.Controllers
             {
                 if (!LandmarkExists(id))
                 {
-                    return NotFound();
+                    throw;
                 }
                 else
                 {
@@ -70,7 +60,7 @@ namespace Landmark_Remark.Controllers
                 }
             }
 
-            return StatusCode(HttpStatusCode.NoContent);
+            return db.Landmarks;
         }
 
         // POST: api/Landmarks

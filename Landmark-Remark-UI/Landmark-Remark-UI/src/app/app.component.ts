@@ -70,9 +70,11 @@ export class AppComponent  {
             'User': this.user,
             'Note': this.note         
         };
-        this._httpService.updateNotes(body);
+        this._httpService.updateNotes(body).subscribe(data => {
+            this.results = data;
+        });
     }
-    window.location.reload();
+    //window.location.reload();
   }
 
   filterDisplay() {

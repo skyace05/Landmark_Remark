@@ -23,9 +23,9 @@ export class httpService {
     });    
   }
 
-  updateNotes(body): any {
-      return this.http.put<Landmark>('http://localhost:50440/api/Landmarks/' + body.Id, body)
-        .subscribe((data: Landmark) => {
+  updateNotes(body): Observable<Landmark[]> {
+      return this.http.put<Landmark[]>('http://localhost:50440/api/Landmarks/' + body.Id, body)
+          .map((data: Landmark[]) => {
             return data;
     });
   }
