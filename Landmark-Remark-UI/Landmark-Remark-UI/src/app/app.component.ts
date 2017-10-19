@@ -37,7 +37,8 @@ export class AppComponent  {
     });
 
     this._httpService.getLandmarks().subscribe(data => {
-        this.results = data;
+        this.results = data; // raw data from db
+        this.query = this.results; // data always changing for search display
     });
   }
 
