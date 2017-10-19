@@ -21,7 +21,7 @@
         <div class="form-container">
             <div class="row columns">
                 <div class="user-input">
-                    <input type="text" class="input"  [(ngModel)]="user" formControlName="user" placeholder="My name is..." required />
+                    <input type="text" class="input"  [(ngModel)]="user" formControlName="user" placeholder="My name is..." pattern="[a-zA-Z0-9]*" required />
                     <label class="alert" *ngIf="!userForm.controls['user'].valid && userForm.controls['user'].touched"> This field is required. </label>
                 </div>
                 <div class="user-input"> 

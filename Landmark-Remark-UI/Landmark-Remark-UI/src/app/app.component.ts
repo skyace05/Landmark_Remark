@@ -69,7 +69,8 @@ export class AppComponent  {
         };
         this._httpService.postNotes(body).subscribe(data => {
             this.results = data;
-        });;
+        });
+        this.userForm.reset();
     }
     // if user already exists just update record
     else {
@@ -83,6 +84,7 @@ export class AppComponent  {
         this._httpService.updateNotes(body).subscribe(data => {
             this.results = data;
         });
+        this.userForm.reset();
     }
   }
 
