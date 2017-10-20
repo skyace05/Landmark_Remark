@@ -2,11 +2,14 @@
   height: 300px;
 }
 
+.menu{
+    float:left;
+}
+
 .search{
-  text-align:center;
-  position:center;
   margin: auto;
-  width: 95%;
+  margin-top: 20px;
+  width: 250px;
 }
 
 .alert {
@@ -17,7 +20,6 @@
 .user-input {
   width:250px;
   height:60px;
-
 }
 
 .input {
