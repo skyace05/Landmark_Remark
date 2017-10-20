@@ -1,44 +1,42 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-    <div class="menu">
-        <div class="row columns">
-            <div class="user-input">
-                <input type="text" class="search" [(ngModel)]="search" (keyup)="filterDisplay($event)" placeholder="Search for notes or users" />
-            </div>
-        </div>
-        <form [formGroup]="userForm" (ngSubmit)="submit()">
-            <div class="form-container">
-                <div class="row columns">
-                    <div class="user-input">
-                        <input type="text" class="input" [(ngModel)]="user" formControlName="user" placeholder="My name is..." pattern="[a-zA-Z0-9]*" required />
-                        <label class="alert" *ngIf="!userForm.controls['user'].valid && userForm.controls['user'].touched"> Input is invalid. </label>
-                    </div>
-                    <div class="user-input">
-                        <input type="text" class="input" [(ngModel)]="note" formControlName="note" placeholder="Leave a note" required />
-                        <label class="alert" *ngIf="!userForm.controls['note'].valid && userForm.controls['note'].touched"> Input is invalid. </label>
-                    </div>
-                    <input type="submit" class="button expanded submit" value="Submit" [disabled]="!userForm.valid" />
-                </div>
-            </div>
-        </form>
-        </div>
+    <!-- Sets the center of the map to current user location -->
+    <sebm-google-map [latitude]="lat" [longitude]="lng">
+        <!-- For current user location -->
+        <sebm-google-map-marker [latitude]="lat" [longitude]="lng" label="C"> </sebm-google-map-marker>
 
-    <div class="map">
-        <!-- Sets the center of the map to current user location -->
-        <sebm-google-map [latitude]="lat" [longitude]="lng">
-            <!-- For current user location -->
-            <sebm-google-map-marker [latitude]="lat" [longitude]="lng" label="C"> </sebm-google-map-marker>
+        <!-- Display other user notes -->
+        <div *ngFor="let x of query">
+            <sebm-google-map-marker [latitude]=x.Latitude [longitude]=x.Longitude>
+                <sebm-google-map-info-window>
+                    {{x.User}}: {{x.Note}}
+                </sebm-google-map-info-window>
+            </sebm-google-map-marker>
+        </div>
+    </sebm-google-map>
 
-            <!-- Display other user notes -->
-            <div *ngFor="let x of query">
-                <sebm-google-map-marker [latitude]=x.Latitude [longitude]=x.Longitude>
-                    <sebm-google-map-info-window>
-                        {{x.User}}: {{x.Note}}
-                    </sebm-google-map-info-window>
-                </sebm-google-map-marker>
-            </div>
-        </sebm-google-map>
+
+
+    <div class="row columns">
+        <div class="user-input">
+            <input type="text" class="search" [(ngModel)]="search" (keyup)="filterDisplay($event)" placeholder="Search for notes or users" />
+        </div>
     </div>
+    <form [formGroup]="userForm" (ngSubmit)="submit()">
+        <div class="form-container">
+            <div class="row columns">
+                <div class="user-input">
+                    <input type="text" class="input" [(ngModel)]="user" formControlName="user" placeholder="My name is..." pattern="[a-zA-Z0-9]*" required />
+                    <label class="alert" *ngIf="!userForm.controls['user'].valid && userForm.controls['user'].touched"> Input is invalid. </label>
+                </div>
+                <div class="user-input">
+                    <input type="text" class="input" [(ngModel)]="note" formControlName="note" placeholder="Leave a note" required />
+                    <label class="alert" *ngIf="!userForm.controls['note'].valid && userForm.controls['note'].touched"> Input is invalid. </label>
+                </div>
+                <input type="submit" class="button expanded submit" value="Submit" [disabled]="!userForm.valid" />
+            </div>
+        </div>
+    </form>
 </div>
 
 
